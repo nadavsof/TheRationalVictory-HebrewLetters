@@ -1,0 +1,165 @@
+﻿<Window x:Class="NAudioWpfDemo.Nadav"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="The Rational Victory" 
+        WindowState="Maximized"
+        Loaded="Window_Loaded" 
+        KeyUp="Window_KeyUp"
+        MouseMove="Window_MouseMove"
+        Closing="Window_Closing">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+        <StackPanel>
+            <StackPanel>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Name="defaultBtn" Click="defaultBtn_Click">Import Defaults</Button>
+                        <Button Name="startTutorialBtn" Click="startTutorialBtn_Click" Foreground="Blue">Begin/Continue Tutorial</Button>
+                        <Button Name="nextTutorialStepBtn" Click="nextTutorialStepBtn_Click" IsEnabled="False">Next Step</Button>
+                        <Button Name="pauseTutorialBtn" Click="pauseTutorialBtn_Click" IsEnabled="False">Pause Tutorial</Button>
+                        <Button Name="restartTutorial" Click="restartTutorial_Click">Restart Tutorial</Button>
+                        <Label Margin="10,0,0,0">Samples:</Label>
+                        <ComboBox Name="samplesDirsCmb" Width="100" SelectionChanged="samplesDirsCmb_SelectionChanged" ></ComboBox>
+                        <ComboBox Name="samplesSubDirsCmb" ItemsSource="{Binding ElementName=samplesDirsCmb, Path=SelectedItem.SubDirs}" Width="100" SelectionChanged="samplesSubDirsCmb_SelectionChanged"></ComboBox>
+                        <ComboBox Name="samplesCmb" ItemsSource="{Binding ElementName=samplesSubDirsCmb, Path=SelectedItem.Files}" Width="100" SelectionChanged="samplesCmb_SelectionChanged"></ComboBox>
+                        <Image  Name="sampleImg" Width="50" Height="50"></Image>
+                        <Button Name="sampleBtn" Click="sampleBtn_Click">Import and Run Sample</Button>
+                        <Button Name="currentPathBtn" Margin="50,0,0,0" Click="currentPathBtn_Click">App Path</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="tutorialLbl" Foreground="Blue" Margin="0,10,0,0" Width="800" Height="500" TextWrapping="WrapWithOverflow" Visibility="Collapsed"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Row="0">
+                    <TextBlock>WAV File Path:</TextBlock>
+                    <TextBox Margin="0,0,10,0" Name="filePathTxt"></TextBox>
+                  
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Window Size:</TextBlock>
+                        <ComboBox Name="windowSizeCmb" Width="100">
+                            <ComboBox.Items>
+                                <ComboBoxItem>256</ComboBoxItem>
+                                <ComboBoxItem>512</ComboBoxItem>
+                                <ComboBoxItem  IsSelected="True">1024</ComboBoxItem>
+                                <ComboBoxItem>2048</ComboBoxItem>
+                                <ComboBoxItem>4096</ComboBoxItem>
+                                <ComboBoxItem>8192</ComboBoxItem>
+                                <ComboBoxItem>16384</ComboBoxItem>
+
+                            </ComboBox.Items>
+
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Power of Magnitude for Blue (float):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="blueMagnitudePowerTxt" Width="100" Text="1"></TextBox>
+                        <TextBlock>Power of Magnitude for Green (float):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="greenMagnitudePowerTxt" Width="100" Text="1"></TextBox>
+                        <TextBlock>Power of Magnitude for Red (float):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="redMagnitudePowerTxt" Width="100" Text="1"></TextBox>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Min Hue Blue (hides pixels with less than min) (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minBlueTxt" Width="100" Text="0"></TextBox>
+                        <TextBlock>Min Hue Green (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minGreenTxt" Width="100" Text="0"></TextBox>
+                        <TextBlock>Min Hue Red (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minRedTxt" Width="100" Text="0"></TextBox>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Max Hue Blue (hides pixels with more than max) (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxBlueTxt" Width="100" Text="255"></TextBox>
+                        <TextBlock>Max Hue Green (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxGreenTxt" Width="100" Text="255"></TextBox>
+                        <TextBlock>Max Hue Red (0-255):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxRedTxt" Width="100" Text="255"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Min Computed Magnitude (Can be used to focus the distribution of colors only to certain magnitudes):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minMagLbl" IsReadOnly="True">Not computed yet</TextBox>
+                        <TextBlock>Max Computed Magnitude:</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxMagLbl" IsReadOnly="True">Not computed yet</TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Min Presented Magnitude (the minimal magnitude a frequency has to have at a certain sample to be presented):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minPresentedMagLbl" IsReadOnly="True">Not computed yet</TextBox>
+                        <TextBlock>Max Presented Magnitude:</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxPresentedMagLbl" IsReadOnly="True">Not computed yet</TextBox>
+                    </StackPanel>
+                    <CheckBox Name="magRangeChk" IsChecked="False">Use Mag range instead of powers</CheckBox>
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <TextBlock>Min Magnitude (ignore pixels with magnitudes less than min):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="minMagTxt" Width="100" Text="0"></TextBox>
+                        <TextBlock>Max Magnitude:</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="maxMagTxt" Width="100" Text="0"></TextBox>
+                        <TextBlock>Reverse:</TextBlock>
+                        <CheckBox Name="reverseChk"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                                             
+                        <!--<TextBlock>Contrast  (float):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="contrastTxt" Width="100" Text="10"></TextBox>-->
+                        <TextBlock>Bitmap Size (int):</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="bmpSizeTxt" Width="100" Text="300"></TextBox>
+                        
+                        
+                        <Button Name="changeContrastBtn" Click="changeContrastBtn_Click"  Width="100" IsEnabled="False">Change Size</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Load Image Path:</TextBlock>
+                        <TextBox Margin="0,0,10,0" Name="imagePathTxt" Width="100" Text=""></TextBox>
+                        <Button Name="loadImageBtn" Click="loadImageBtn_Click">Load Image</Button>
+                    </StackPanel>
+                    <TextBlock>Import/Export Settings:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Margin="0,0,10,0" Name="settingsExportPath" Width="500" Text=""></TextBox>
+                        <Button Name="exportSettingsBtn" Click="exportSettingsBtn_Click">Export Settings</Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Margin="0,0,10,0" Name="settingsImportPath" Width="500" Text=""></TextBox>
+                        <Button Name="importSettingsBtn" Click="importSettingsBtn_Click">Import Settings</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="startBtn" Click="startBtn_Click" Width="100" Height="50"  Foreground="DarkBlue"  Margin="0,15,0,0" Content="Run"/>
+                    </StackPanel>
+                    <Label Name="errLbl" Foreground="Red"></Label>
+                </StackPanel>
+                <Slider
+                    x:Name="slider"
+                    Visibility="Hidden"
+                    ToolTip="Determines the zoom factor."
+                    Value="1" Minimum="0.1" Maximum="100"
+                />
+                <TextBox Margin="0,0,10,0" Name="mouseLocationXTxt" Visibility="Hidden"/>
+                <TextBox Margin="0,0,10,0" Name="mouseLocationYTxt" Visibility="Hidden"/>
+
+                <StackPanel Grid.Row="2">
+                    <TextBlock Foreground="Purple" >Please report any idea for imporovement, or any bug (with a print screen) to TheRationalVictory@gmail.com</TextBlock>
+                    <TextBlock Foreground="Purple" Text="Pay attention! For large bitmap size, the image might move to the right and you'll have to scroll to where it is"/>
+
+                    <TextBlock Text="Use Enter to start." />
+                    <TextBlock Text="Use Tag to change contrast (after the program ran at least once)." />
+                    <TextBlock Text="Use Ctrl + Mouse Wheel to zoom in and out on the image." />
+                    <TextBlock Text="Use Ctrl + 0 to reset the zoom." />
+                    <TextBlock Text="Use Ctrl + E to export settings." />
+                    <TextBlock Text="Use Ctrl + I to import settings." />
+                </StackPanel>
+                    <Image Name="img" Grid.Row="3" Width="300" Height="300" MouseWheel="OnMouseWheel" >
+                        <Image.LayoutTransform>
+                            <ScaleTransform 
+                            CenterX="{Binding ElementName=mouseLocationXTxt,Path=Text}" 
+                            CenterY="{Binding ElementName=mouseLocationYTxt,Path=Text}"
+                            ScaleX="{Binding ElementName=slider,Path=Value}"
+                            ScaleY="{Binding ElementName=slider,Path=Value}"
+                        />
+                        </Image.LayoutTransform>
+                   
+                    </Image>
+                    
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

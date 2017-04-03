@@ -1,0 +1,6 @@
+settingsImportPath,Tutorial\Ain-One-MaxMin.xml
+!import
+!paint,settingsImportPath
+!paint,minMagTxt
+!paint,maxMagTxt
+!run

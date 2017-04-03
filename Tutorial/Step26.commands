@@ -1,0 +1,4 @@
+settingsImportPath,Tutorial\Menora-noise.xml
+!import
+filePathTxt,Tutorial\Menora-noise.wav
+!run

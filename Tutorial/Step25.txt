@@ -1,0 +1,7 @@
+Step 25
+
+We now see, at the bottom of the graph, an instance of the letter Nun from a different recording. Its location is, more or less, were the previous bottom instance was. This instance has 2 main problems with it - its base is going to much to the right, generating a risk of confusing it with a Beth (although it is certainly not a Beth, as for Beth the head is as long as the base), and its neck is straight when it should be diagonal (like it was with the previous Nun). 
+
+Although this instance is worst when it comes to recognizing it and using it in sentences,  it does have its crown. The crown is not perfect, but there are definitely 3 lines going up on top of the instance's head.
+
+When you're ready, please continue to the next step.

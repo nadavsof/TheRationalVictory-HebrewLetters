@@ -1,0 +1,8 @@
+Step 6
+
+We've ran the algorithm using the new settings. Please notice that the output image is the same as before. Not only that, but you can check out the Min/Max Presented Magnitudes, and compare them with the min/max magnitude text boxes (the former are automatically computed and are read only, the others are there as input parameters). You can see that even though the min/max magnitude are off (their check box is unchecked), the actual range of presented magnitudes is the same because of the power of the blue and green magnitudes and because of the min/max hue parameters. As long as all displayed colors have the same values for the power and the min/max hue, this will always be the case.
+
+We will now play with the window size parameter to understand what it does.
+
+Please continue to the next step when you're ready.
+

@@ -1,0 +1,4 @@
+settingsImportPath,Tutorial\Nun-good.xml
+!import
+filePathTxt,Tutorial\Nun-good.wav
+!run

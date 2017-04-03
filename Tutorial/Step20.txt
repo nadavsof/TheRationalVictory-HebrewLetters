@@ -1,0 +1,7 @@
+Step 20
+
+To continue with the demonstration of the necessity of using a filter, we've just set the powers and min/max hues of the blue and green colors to values that will basically present only the strongest magnitudes. Now all the graph is almost empty. 
+
+This is why the use of filters in digital signal processing (DSP) is popular. It is worth mentioning that the filter that is used in this program is one of the most, if not the most, simple filter there is, which simply limits the magnitudes that are displayed to a certain range. 
+
+When you're ready, please continue to the next step.

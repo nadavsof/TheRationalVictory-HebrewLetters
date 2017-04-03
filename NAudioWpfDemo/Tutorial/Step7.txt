@@ -1,0 +1,11 @@
+Step 7
+
+We've switched the window size to 1024 and ran the algorithm on the same WAV file as before. The window size is a parameter to the Short Time Fourie Transform (STFT). The bigger the value is, the more accurate the algorithm find the frequency magnitudes, and the less accurate it is with regard to the time scale (It unites more samples into one output value vector). As a result, using a big window size results in a bigger frequencies range (a window of 1024, for example, finds the magnitudes of 1024 frequencies, while 512 finds only 512 frequencies), and a shorter time range. That is why the image is now taller (bigger Y axis, which is the frequencies axis) and narrower (smaller X axis, which is the time axis).
+
+You can notice that now, with the new window size, the same parameters that showed a recognizable instance of the letter don't work as well.
+
+You can also notice that the image is now small and it is uncomfortable to look at it. 
+
+We will now enlarge the image.
+
+When you're ready, please continue to the next step.

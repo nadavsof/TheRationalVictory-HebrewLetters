@@ -1,0 +1,5 @@
+Step 16
+
+Oops. We increased the power too much, and now the left part of the Taf is barely connected. The previous value of the powers was 1, now it is 1.1. Lets try something in the middle.
+
+When you're ready, please continue to the next step.
