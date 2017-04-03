@@ -1,0 +1,14 @@
+step 4
+
+We have imported the predefined settings that present a single instance of the letter and ran the algorithm.
+
+The letter should appear at the bottom of the image (scroll down to see it).
+
+If you are perceptive, you may notice that on the top of the recognizable letter, there is a small instance of the same letter. If you are extremely perceptive, you can even see that at the bottom of the image there's a black space in the shape of that letter (more or less).
+
+Please notice that what we used to present that instance of the letter is the min/max text boxes that specify the range of presented magnitudes. What the max magnitude text box mean is that if at a given sample t, frequency f had a higher magnitude than the max magnitude, it won't be displayed. The same goes for the min magnitude text box. This is a very basic and simple linear, time-invariant filter. The usage of filters in digital signal processing is standard, and usually much more complex filters are used. See wikipedia/google for further informations on DSP filters.
+
+To enable the use of the specific ranges, you need to check the "Use Mag range instead of powers" check box. It is currently checked.
+
+Please continue to the next step when you're ready.
+

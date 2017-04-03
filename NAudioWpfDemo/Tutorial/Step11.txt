@@ -1,0 +1,9 @@
+Step 11
+
+We've now set both the green and blue colors to the same power, but we present different hues. The green is only shown for points with hues that are between 1 and 4 (including 1 and 4), and the blue is only shown for hues that are between 5 and 255.
+
+At the bottom of the image, there are 2 instances of the letter. One is blue and the other is green.
+
+We will now go back to the settings that showed one recognizable instance of the letter, but we'll use them with a different recording.
+
+When you're ready, please continue to the next step.

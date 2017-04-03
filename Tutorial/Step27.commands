@@ -1,0 +1,4 @@
+settingsImportPath,Tutorial\Menora-pasuk.xml
+!import
+filePathTxt,Tutorial\Menora-pasuk.wav
+!run

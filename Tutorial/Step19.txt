@@ -1,0 +1,5 @@
+Step 19
+
+To demonstrate the necessity of using a filter, we've just set the powers and min/max hues of the blue and green colors to values that will basically enable all magnitudes to be displayed. Now all the graph is painted. 
+
+When you're ready, please continue to the next step.

@@ -1,0 +1,24 @@
+Step 18
+
+This is the exact same image.
+
+And here is the mathematical proof, for those who still think the parameters might be able to make any recording look like any shape (the proof considers only one color, but in any case, in all the best images of the letters, the blue and green colors are used with the same parameters, which makes them just a single color of turquoise):
+
+* If you already understand the equivalence, or believe it, or just hate even simple mathematics, feel free to continue to the next step.
+
+** The proof assumes that the hues can be any real number, when in fact they are integers. This makes the proof more powerful, because the fact that the hues are integers gives the parameters much less power and freedom.
+
+Input: pow, minHue, maxHue;
+1. let maxMag be the maximum magnitude over the set of all points (t,f) of the graph, which doesn't depend on the parameters, but only depends on the window size (which is a standard parameter for the STFT algorithm) and the WAV file;
+2. the hues are distributed according to the value of 255/(maxMag^pow) as a single unit of hue (out of the 256 possible values);
+3. for a given point (t,f) with a magnitude m, let h be (m^pow)*255/(maxMag^pow), which is the hue that a point with a magnitude of m gets;
+4. (t,f) will be displayed in the graph, with the maximal hue, if and only if minHue<=h<=maxHue;
+5. so it will be displayed if and only if 
+	minHue<=(m^pow)*255/(maxMag^pow)<=maxHue;
+6. so it will be displayed if and only if:
+	minHue*(maxMag^pow)/255<=m^pow<=maxHue*(maxMag^pow)/255;	
+7. so it will be displayed if and only if:
+	Sqrt(minHue*(maxMag^pow)/255,pow)<=m<=Sqrt(maxHue*(maxMag^pow)/255,pow);
+8. Therefore, using the parameters of the magnitude power with min/max hue, with the values pow,minHue,maxHue is mathematically equivalent to using a simple filter that only displays magnitude in the range of [Sqrt(minHue*(maxMag^pow)/255,pow),Sqrt(maxHue*(maxMag^pow)/255,pow)], when these expressions are,at the end, just a pair of numbers for the range of the magnitudes to be presented;
+
+When you're ready, please continue to the next step.

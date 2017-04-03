@@ -1,0 +1,9 @@
+Step 3
+
+We ran the algorithm using the default parameters values on the selected WAV file. 
+
+You can't see anything clear yet. What you can notice, by scrolling down, is that the top half of the image is a vertical mirror of the bottom (anything at the top is upside down relative to the bottom). The fact that the top is a vertical mirror of the bottom is not some trick of this software, but it is a known feature of the FFT algorithm, which is the most basic and most common algorithm for digital signal processing (DSP).
+
+We will now insert the predefined values that will present a recognizable letter.
+
+When you're ready, please continue to the next step.

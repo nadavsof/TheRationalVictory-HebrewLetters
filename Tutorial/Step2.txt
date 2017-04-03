@@ -1,0 +1,7 @@
+Step 2
+
+See the text box of the file name, which was changed to the path of the first letter we are going to find. 
+
+We will now run the STFT algorithm, which finds the frequencies of the sound waves in the chosen WAV file. First, we will run it using the default parameter values.
+
+Please continue to the next step.

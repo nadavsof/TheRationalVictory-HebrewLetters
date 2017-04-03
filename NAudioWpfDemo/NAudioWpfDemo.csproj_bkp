@@ -1,0 +1,2118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7B74F85-D353-4ED4-A321-E6E4AD4D7D32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NAudioWpfDemo</RootNamespace>
+    <AssemblyName>NAudioWpfDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AA633444BD76195A3F8D79C9ECBAA7363D6D9E75</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NAudioWpfDemo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AudioPlaybackDemo\AudioPlaybackDemoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrumMachineDemo\DrumMachineDemoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrumMachineDemo\DrumPatternEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnumMediaFoundationTransforms\EnumMftView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EqualizationDemo\EqualizationDemoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImagePresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MediaFoundationEncode\MediaFoundationEncodeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MediaFoundationPlayback\MediaFoundationPlaybackView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MediaFoundationResample\MediaFoundationResampleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheRationalVictory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PolygonWaveFormControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PolylineWaveFormControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SpectrumAnalyser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WasapiCaptureDemo\RecordingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WasapiCaptureDemo\WasapiCaptureDemoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WaveFormControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AudioPlaybackDemo\AudioPlaybackDemoPlugin.cs" />
+    <Compile Include="AudioPlaybackDemo\AudioPlaybackDemoView.xaml.cs">
+      <DependentUpon>AudioPlaybackDemoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AudioPlaybackDemo\PolylineWaveFormVisualization.cs" />
+    <Compile Include="AudioPlaybackDemo\IVisualizationPlugin.cs" />
+    <Compile Include="AudioPlaybackDemo\PolygonWaveFormVisualization.cs" />
+    <Compile Include="AudioPlaybackDemo\SpectrumAnalyzerVisualization.cs" />
+    <Compile Include="DrumMachineDemo\DrumKit.cs" />
+    <Compile Include="DrumMachineDemo\DrumMachineDemoPlugin.cs" />
+    <Compile Include="DrumMachineDemo\DrumMachineDemoView.xaml.cs">
+      <DependentUpon>DrumMachineDemoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrumMachineDemo\DrumMachineDemoViewModel.cs" />
+    <Compile Include="DrumMachineDemo\DrumPattern.cs" />
+    <Compile Include="DrumMachineDemo\DrumPatternEditor.xaml.cs">
+      <DependentUpon>DrumPatternEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrumMachineDemo\MusicSampleProvider.cs" />
+    <Compile Include="DrumMachineDemo\DrumPatternSampleProvider.cs" />
+    <Compile Include="DrumMachineDemo\PatternSequencer.cs" />
+    <Compile Include="DrumMachineDemo\PatternSequencerTests.cs" />
+    <Compile Include="DrumMachineDemo\SampleSource.cs" />
+    <Compile Include="EnumMediaFoundationTransforms\EnumMftDemo.cs" />
+    <Compile Include="EnumMediaFoundationTransforms\EnumMftView.xaml.cs">
+      <DependentUpon>EnumMftView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EnumMediaFoundationTransforms\EnumMftViewModel.cs" />
+    <Compile Include="EqualizationDemo\EqualizationDemoPlugin.cs" />
+    <Compile Include="EqualizationDemo\EqualizationDemoView.xaml.cs">
+      <DependentUpon>EqualizationDemoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EqualizationDemo\EqualizationDemoViewModel.cs" />
+    <Compile Include="EqualizationDemo\Equalizer.cs" />
+    <Compile Include="EqualizationDemo\EqualizerBand.cs" />
+    <Compile Include="ImagePresenter.xaml.cs">
+      <DependentUpon>ImagePresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IModule.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioPlaybackDemo\AudioPlayback.cs" />
+    <Compile Include="AudioPlaybackDemo\AudioPlaybackViewModel.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="MediaFoundationEncode\MediaFoundationEncodePlugin.cs" />
+    <Compile Include="MediaFoundationEncode\MediaFoundationEncodeView.xaml.cs">
+      <DependentUpon>MediaFoundationEncodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaFoundationEncode\MediaFoundationEncodeViewModel.cs" />
+    <Compile Include="MediaFoundationEncode\MediaTypeViewModel.cs" />
+    <Compile Include="MediaFoundationPlayback\MediaFoundationPlaybackView.xaml.cs">
+      <DependentUpon>MediaFoundationPlaybackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaFoundationPlayback\MediaFoundationPlaybackPlugin.cs" />
+    <Compile Include="MediaFoundationPlayback\MediaFoundationPlaybackViewModel.cs" />
+    <Compile Include="MediaFoundationResample\MediaFoundationEncodePlugin.cs" />
+    <Compile Include="MediaFoundationResample\MediaFoundationResampleView.xaml.cs">
+      <DependentUpon>MediaFoundationResampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaFoundationResample\MediaFoundationResampleViewModel.cs" />
+    <Compile Include="ModuleBase.cs" />
+    <Compile Include="TheRationalVictory.xaml.cs">
+      <DependentUpon>TheRationalVictory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PolygonWaveFormControl.xaml.cs">
+      <DependentUpon>PolygonWaveFormControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IWaveFormRenderer.cs" />
+    <Compile Include="PolylineWaveFormControl.xaml.cs">
+      <DependentUpon>PolylineWaveFormControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AudioPlaybackDemo\SampleAggregator.cs" />
+    <Compile Include="SpectrumAnalyser.xaml.cs">
+      <DependentUpon>SpectrumAnalyser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DelegateCommand.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="WasapiCaptureDemo\RecordingsView.xaml.cs">
+      <DependentUpon>RecordingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WasapiCaptureDemo\RecordingsViewModel.cs" />
+    <Compile Include="WasapiCaptureDemo\WasapiCaptureDemoPlugin.cs" />
+    <Compile Include="WasapiCaptureDemo\WasapiCaptureDemoView.xaml.cs">
+      <DependentUpon>WasapiCaptureDemoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WasapiCaptureDemo\WasapiCaptureViewModel.cs" />
+    <Compile Include="WaveFormControl.xaml.cs">
+      <DependentUpon>WaveFormControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AudioPlaybackDemo\WaveformVisual.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NAudioWpfDemo_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Content Include="default.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step1.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step10.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step11.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step12.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step13.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step14.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step15.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step16.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step17.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step18.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step19.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step2.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step20.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step21.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step22.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step23.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step24.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step25.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step26.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step27.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\step3.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\step4.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step5.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step6.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step7.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step8.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step9.commands">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NAudio\NAudio.csproj">
+      <Project>{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}</Project>
+      <Name>NAudio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\SampleData\Drums\closed-hat-trimmed.wav">
+      <Link>Samples\closed-hat-trimmed.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SampleData\Drums\crash-trimmed.wav">
+      <Link>Samples\crash-trimmed.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SampleData\Drums\kick-trimmed.wav">
+      <Link>Samples\kick-trimmed.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SampleData\Drums\open-hat-trimmed.wav">
+      <Link>Samples\open-hat-trimmed.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SampleData\Drums\snare-trimmed.wav">
+      <Link>Samples\snare-trimmed.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Ain-One-MaxMin.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Ain-One-Powers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Ain.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Lameth-good.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Lameth-good.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Lameth-single.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Lameth-single.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Menora-noise.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Menora-noise.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Menora-pasuk.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Menora-pasuk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Nun-crown.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Nun-crown.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Nun-good.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Nun-good.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step11.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step12.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step14.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step15.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step16.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step17.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step18.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step19.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step20.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step21.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step22.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step23.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step24.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step25.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step26.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step27.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\step3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step4.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step6.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step7.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step8.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Step9.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Taf-Like-Ain.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tutorial\Taf.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Tutorial\todo.txt" />
+    <Content Include="Samples\Letters\100_kuf\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Accent.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\100_kuf\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\100_kuf\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular10.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular10.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular4.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular6.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular6.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular8.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular8.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular9.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\regular9.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\sfaradi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\sfaradi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\sfaradi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\10_yud\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\zbig-with-mess.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\zbig-with-mess.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\1_alef\zbig-with-mess.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\200_resh\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\200_resh\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\200_resh\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple-sofit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple-sofit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple-sofit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\20_kaf\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\regular1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\regular1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\regular1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\2_bet\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Samples\Letters\300_shin\4heads1.png" />
+    <Content Include="Samples\Letters\300_shin\4heads1.wav" />
+    <Resource Include="Samples\Letters\300_shin\4heads1.xml" />
+    <Resource Include="Samples\Letters\300_shin\4heads3.png" />
+    <Content Include="Samples\Letters\300_shin\4heads3.wav" />
+    <Resource Include="Samples\Letters\300_shin\4heads3.xml" />
+    <Resource Include="Samples\Letters\300_shin\4heads4.png" />
+    <Content Include="Samples\Letters\300_shin\4heads4.wav" />
+    <Resource Include="Samples\Letters\300_shin\4heads4.xml" />
+    <Resource Include="Samples\Letters\300_shin\4heads5.png" />
+    <Content Include="Samples\Letters\300_shin\4heads5.wav" />
+    <Resource Include="Samples\Letters\300_shin\4heads5.xml" />
+    <Resource Include="Samples\Letters\300_shin\4heads6.png" />
+    <Content Include="Samples\Letters\300_shin\4heads6.wav" />
+    <Resource Include="Samples\Letters\300_shin\4heads6.xml" />
+    <Resource Include="Samples\Letters\300_shin\left2.png" />
+    <Content Include="Samples\Letters\300_shin\left2.wav" />
+    <Resource Include="Samples\Letters\300_shin\left2.xml" />
+    <Resource Include="Samples\Letters\300_shin\left3.png" />
+    <Content Include="Samples\Letters\300_shin\left3.wav" />
+    <Resource Include="Samples\Letters\300_shin\left3.xml" />
+    <Resource Include="Samples\Letters\300_shin\left5.png" />
+    <Content Include="Samples\Letters\300_shin\left5.wav" />
+    <Resource Include="Samples\Letters\300_shin\left5.xml" />
+    <Resource Include="Samples\Letters\300_shin\left6.png" />
+    <Content Include="Samples\Letters\300_shin\left6.wav" />
+    <Resource Include="Samples\Letters\300_shin\left6.xml" />
+    <Resource Include="Samples\Letters\300_shin\left7-ashkenazi.png" />
+    <Content Include="Samples\Letters\300_shin\left7-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\300_shin\left7-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\300_shin\regular3.png" />
+    <Content Include="Samples\Letters\300_shin\regular3.wav" />
+    <Resource Include="Samples\Letters\300_shin\regular3.xml" />
+    <Resource Include="Samples\Letters\300_shin\regular5.png" />
+    <Content Include="Samples\Letters\300_shin\regular5.wav" />
+    <Resource Include="Samples\Letters\300_shin\regular5.xml" />
+    <Resource Include="Samples\Letters\300_shin\regular6.png" />
+    <Content Include="Samples\Letters\300_shin\regular6.wav" />
+    <Resource Include="Samples\Letters\300_shin\regular6.xml" />
+    <Resource Include="Samples\Letters\300_shin\regular7.png" />
+    <Content Include="Samples\Letters\300_shin\regular7.wav" />
+    <Resource Include="Samples\Letters\300_shin\regular7.xml" />
+    <Resource Include="Samples\Letters\300_shin\simple-4heads.png" />
+    <Content Include="Samples\Letters\300_shin\simple-4heads.wav" />
+    <Resource Include="Samples\Letters\300_shin\simple-4heads.xml" />
+    <Resource Include="Samples\Letters\300_shin\simple-left.png" />
+    <Content Include="Samples\Letters\300_shin\simple-left.wav" />
+    <Resource Include="Samples\Letters\300_shin\simple-left.xml" />
+    <Resource Include="Samples\Letters\300_shin\simple.png" />
+    <Content Include="Samples\Letters\300_shin\simple.wav" />
+    <Resource Include="Samples\Letters\300_shin\simple.xml" />
+    <Content Include="Samples\Letters\30_lamed\accurate-back1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back4.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\accurate-back4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back16.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back16.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back7.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\back7.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi4.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi5.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi5.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi6.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi6.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi7.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfaradi7.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfradi-both-up-and-back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfradi-both-up-and-back.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\sfradi-both-up-and-back.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple-back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple-back.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple-back.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\30_lamed\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular14.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular14.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular17.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular17.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\regular3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\sfaradi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\sfaradi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\sfaradi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\simple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\simple.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Letters\3_gimel\simple.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Samples\Letters\400_taf\simple.png" />
+    <Content Include="Samples\Letters\400_taf\simple.wav" />
+    <Resource Include="Samples\Letters\400_taf\simple.xml" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit1.png" />
+    <Content Include="Samples\Letters\40_mem\accurate-sofit1.wav" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit1.xml" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit2.png" />
+    <Content Include="Samples\Letters\40_mem\accurate-sofit2.wav" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit2.xml" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit3.png" />
+    <Content Include="Samples\Letters\40_mem\accurate-sofit3.wav" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit3.xml" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit5.png" />
+    <Content Include="Samples\Letters\40_mem\accurate-sofit5.wav" />
+    <Resource Include="Samples\Letters\40_mem\accurate-sofit5.xml" />
+    <Resource Include="Samples\Letters\40_mem\lots-sofit.png" />
+    <Content Include="Samples\Letters\40_mem\lots-sofit.wav" />
+    <Resource Include="Samples\Letters\40_mem\lots-sofit.xml" />
+    <Resource Include="Samples\Letters\40_mem\regular2.png" />
+    <Content Include="Samples\Letters\40_mem\regular2.wav" />
+    <Resource Include="Samples\Letters\40_mem\regular2.xml" />
+    <Resource Include="Samples\Letters\40_mem\regular3.png" />
+    <Content Include="Samples\Letters\40_mem\regular3.wav" />
+    <Resource Include="Samples\Letters\40_mem\regular3.xml" />
+    <Resource Include="Samples\Letters\40_mem\simple-sfaradi.png" />
+    <Content Include="Samples\Letters\40_mem\simple-sfaradi.wav" />
+    <Resource Include="Samples\Letters\40_mem\simple-sfaradi.xml" />
+    <Resource Include="Samples\Letters\40_mem\simple-sofit.png" />
+    <Content Include="Samples\Letters\40_mem\simple-sofit.wav" />
+    <Resource Include="Samples\Letters\40_mem\simple-sofit.xml" />
+    <Resource Include="Samples\Letters\40_mem\simple.png" />
+    <Content Include="Samples\Letters\40_mem\simple.wav" />
+    <Resource Include="Samples\Letters\40_mem\simple.xml" />
+    <Resource Include="Samples\Letters\40_mem\sofit11.png" />
+    <Content Include="Samples\Letters\40_mem\sofit11.wav" />
+    <Resource Include="Samples\Letters\40_mem\sofit11.xml" />
+    <Resource Include="Samples\Letters\40_mem\sofit13.png" />
+    <Content Include="Samples\Letters\40_mem\sofit13.wav" />
+    <Resource Include="Samples\Letters\40_mem\sofit13.xml" />
+    <Resource Include="Samples\Letters\4_daled\simple.png" />
+    <Content Include="Samples\Letters\4_daled\simple.wav" />
+    <Resource Include="Samples\Letters\4_daled\simple.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi1.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi1.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi1.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi5.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi5.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi5.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi7.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi7.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi7.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi8.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi8.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-ashkenazi8.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi2.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-sfaradi2.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi2.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi4.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-sfaradi4.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi4.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi6.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-sfaradi6.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi6.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi9.png" />
+    <Content Include="Samples\Letters\50_nun\accurate-sofit-sfaradi9.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate-sofit-sfaradi9.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate1-sfaradi.png" />
+    <Content Include="Samples\Letters\50_nun\accurate1-sfaradi.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate1-sfaradi.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate10-ashkenazi.png" />
+    <Content Include="Samples\Letters\50_nun\accurate10-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate10-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate12-ashkenazi.png" />
+    <Content Include="Samples\Letters\50_nun\accurate12-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate12-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate3-ashkenazi.png" />
+    <Content Include="Samples\Letters\50_nun\accurate3-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate3-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate4-temani.png" />
+    <Content Include="Samples\Letters\50_nun\accurate4-temani.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate4-temani.xml" />
+    <Resource Include="Samples\Letters\50_nun\accurate6-ashkenazi.png" />
+    <Content Include="Samples\Letters\50_nun\accurate6-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\50_nun\accurate6-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\50_nun\ashkenazi-with-crown.png" />
+    <Content Include="Samples\Letters\50_nun\ashkenazi-with-crown.wav" />
+    <Resource Include="Samples\Letters\50_nun\ashkenazi-with-crown.xml" />
+    <Resource Include="Samples\Letters\50_nun\simple-ashkenazi.png" />
+    <Content Include="Samples\Letters\50_nun\simple-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\50_nun\simple-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\50_nun\simple-sofit.png" />
+    <Content Include="Samples\Letters\50_nun\simple-sofit.wav" />
+    <Resource Include="Samples\Letters\50_nun\simple-sofit.xml" />
+    <Resource Include="Samples\Letters\50_nun\sofit-ashkenazi5.png" />
+    <Content Include="Samples\Letters\50_nun\sofit-ashkenazi5.wav" />
+    <Resource Include="Samples\Letters\50_nun\sofit-ashkenazi5.xml" />
+    <Resource Include="Samples\Letters\50_nun\sofit-sfaradi5.png" />
+    <Content Include="Samples\Letters\50_nun\sofit-sfaradi5.wav" />
+    <Resource Include="Samples\Letters\50_nun\sofit-sfaradi5.xml" />
+    <Resource Include="Samples\Letters\50_nun\sofit2.png" />
+    <Content Include="Samples\Letters\50_nun\sofit2.wav" />
+    <Resource Include="Samples\Letters\50_nun\sofit2.xml" />
+    <Resource Include="Samples\Letters\5_hei\huge.png" />
+    <Content Include="Samples\Letters\5_hei\huge.wav" />
+    <Resource Include="Samples\Letters\5_hei\huge.xml" />
+    <Resource Include="Samples\Letters\5_hei\sfaradi.png" />
+    <Content Include="Samples\Letters\5_hei\sfaradi.wav" />
+    <Resource Include="Samples\Letters\5_hei\sfaradi.xml" />
+    <Resource Include="Samples\Letters\5_hei\sfaradi2.png" />
+    <Content Include="Samples\Letters\5_hei\sfaradi2.wav" />
+    <Resource Include="Samples\Letters\5_hei\sfaradi2.xml" />
+    <Resource Include="Samples\Letters\5_hei\simple-ashkenazi.png" />
+    <Content Include="Samples\Letters\5_hei\simple-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\5_hei\simple-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\5_hei\simple-sfaradi.png" />
+    <Content Include="Samples\Letters\5_hei\simple-sfaradi.wav" />
+    <Resource Include="Samples\Letters\5_hei\simple-sfaradi.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate1.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate1.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate1.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate11-sfaradi.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate11-sfaradi.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate11-sfaradi.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate3.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate3.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate3.xml" />
+    <Resource Include="Samples\Letters\60_sameh\ACCURATE5.png" />
+    <Content Include="Samples\Letters\60_sameh\ACCURATE5.wav" />
+    <Resource Include="Samples\Letters\60_sameh\ACCURATE5.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate6.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate6.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate6.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate7.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate7.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate7.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate8-ashkenazi.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate8-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate8-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\60_sameh\accurate9.png" />
+    <Content Include="Samples\Letters\60_sameh\accurate9.wav" />
+    <Resource Include="Samples\Letters\60_sameh\accurate9.xml" />
+    <Resource Include="Samples\Letters\60_sameh\lots.png" />
+    <Content Include="Samples\Letters\60_sameh\lots.wav" />
+    <Resource Include="Samples\Letters\60_sameh\lots.xml" />
+    <Resource Include="Samples\Letters\60_sameh\simple.png" />
+    <Content Include="Samples\Letters\60_sameh\simple.wav" />
+    <Resource Include="Samples\Letters\60_sameh\simple.xml" />
+    <Resource Include="Samples\Letters\6_waw\ashkenazi4.png" />
+    <Content Include="Samples\Letters\6_waw\ashkenazi4.wav" />
+    <Resource Include="Samples\Letters\6_waw\ashkenazi4.xml" />
+    <Resource Include="Samples\Letters\6_waw\sfaradi.png" />
+    <Content Include="Samples\Letters\6_waw\sfaradi.wav" />
+    <Resource Include="Samples\Letters\6_waw\sfaradi.xml" />
+    <Resource Include="Samples\Letters\6_waw\sfaradi3.png" />
+    <Content Include="Samples\Letters\6_waw\sfaradi3.wav" />
+    <Resource Include="Samples\Letters\6_waw\sfaradi3.xml" />
+    <Resource Include="Samples\Letters\6_waw\simple.png" />
+    <Content Include="Samples\Letters\6_waw\simple.wav" />
+    <Resource Include="Samples\Letters\6_waw\simple.xml" />
+    <Resource Include="Samples\Letters\70_ain\2letters-blue-green.png" />
+    <Content Include="Samples\Letters\70_ain\2letters-blue-green.wav" />
+    <Resource Include="Samples\Letters\70_ain\2letters-blue-green.xml" />
+    <Resource Include="Samples\Letters\70_ain\2letters.png" />
+    <Content Include="Samples\Letters\70_ain\2letters.wav" />
+    <Resource Include="Samples\Letters\70_ain\2letters.xml" />
+    <Resource Include="Samples\Letters\70_ain\lots-small-ones-marked.png" />
+    <Resource Include="Samples\Letters\70_ain\lots-small-ones.png" />
+    <Content Include="Samples\Letters\70_ain\lots-small-ones.wav" />
+    <Resource Include="Samples\Letters\70_ain\lots-small-ones.xml" />
+    <Resource Include="Samples\Letters\70_ain\regular14.png" />
+    <Content Include="Samples\Letters\70_ain\regular14.wav" />
+    <Resource Include="Samples\Letters\70_ain\regular14.xml" />
+    <Resource Include="Samples\Letters\70_ain\regular16.png" />
+    <Content Include="Samples\Letters\70_ain\regular16.wav" />
+    <Resource Include="Samples\Letters\70_ain\regular16.xml" />
+    <Resource Include="Samples\Letters\70_ain\regular6.png" />
+    <Content Include="Samples\Letters\70_ain\regular6.wav" />
+    <Resource Include="Samples\Letters\70_ain\regular6.xml" />
+    <Resource Include="Samples\Letters\70_ain\regular7.png" />
+    <Content Include="Samples\Letters\70_ain\regular7.wav" />
+    <Resource Include="Samples\Letters\70_ain\regular7.xml" />
+    <Resource Include="Samples\Letters\70_ain\regular8.png" />
+    <Content Include="Samples\Letters\70_ain\regular8.wav" />
+    <Resource Include="Samples\Letters\70_ain\regular8.xml" />
+    <Resource Include="Samples\Letters\70_ain\simple.png" />
+    <Content Include="Samples\Letters\70_ain\simple.wav" />
+    <Resource Include="Samples\Letters\70_ain\simple.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi-with-crown.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi-with-crown.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi-with-crown.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi1.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi1.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi1.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi2.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi2.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi2.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi3.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi3.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi3.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi4.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi4.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi4.xml" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi6.png" />
+    <Content Include="Samples\Letters\7_zain\ashkenazi6.wav" />
+    <Resource Include="Samples\Letters\7_zain\ashkenazi6.xml" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi-weak.png" />
+    <Content Include="Samples\Letters\7_zain\sfaradi-weak.wav" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi-weak.xml" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi-with-crown.png" />
+    <Content Include="Samples\Letters\7_zain\sfaradi-with-crown.wav" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi-with-crown.xml" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi1.png" />
+    <Content Include="Samples\Letters\7_zain\sfaradi1.wav" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi1.xml" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi6.png" />
+    <Content Include="Samples\Letters\7_zain\sfaradi6.wav" />
+    <Resource Include="Samples\Letters\7_zain\sfaradi6.xml" />
+    <Resource Include="Samples\Letters\7_zain\simple.png" />
+    <Content Include="Samples\Letters\7_zain\simple.wav" />
+    <Resource Include="Samples\Letters\7_zain\simple.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular12.png" />
+    <Content Include="Samples\Letters\80_pei\regular12.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular12.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular15.png" />
+    <Content Include="Samples\Letters\80_pei\regular15.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular15.xml" />
+    <Resource Include="Samples\Letters\80_pei\REGULAR16.png" />
+    <Content Include="Samples\Letters\80_pei\REGULAR16.wav" />
+    <Resource Include="Samples\Letters\80_pei\REGULAR16.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular4.png" />
+    <Content Include="Samples\Letters\80_pei\regular4.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular4.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular5.png" />
+    <Content Include="Samples\Letters\80_pei\regular5.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular5.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular6.png" />
+    <Content Include="Samples\Letters\80_pei\regular6.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular6.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular7.png" />
+    <Content Include="Samples\Letters\80_pei\regular7.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular7.xml" />
+    <Resource Include="Samples\Letters\80_pei\regular8.png" />
+    <Content Include="Samples\Letters\80_pei\regular8.wav" />
+    <Resource Include="Samples\Letters\80_pei\regular8.xml" />
+    <Resource Include="Samples\Letters\80_pei\simple-sofit.png" />
+    <Content Include="Samples\Letters\80_pei\simple-sofit.wav" />
+    <Resource Include="Samples\Letters\80_pei\simple-sofit.xml" />
+    <Resource Include="Samples\Letters\80_pei\simple.png" />
+    <Content Include="Samples\Letters\80_pei\simple.wav" />
+    <Resource Include="Samples\Letters\80_pei\simple.xml" />
+    <Resource Include="Samples\Letters\80_pei\sofit5.png" />
+    <Content Include="Samples\Letters\80_pei\sofit5.wav" />
+    <Resource Include="Samples\Letters\80_pei\sofit5.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate1.png" />
+    <Content Include="Samples\Letters\8_het\accurate1.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate1.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate10.png" />
+    <Content Include="Samples\Letters\8_het\accurate10.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate10.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate11.png" />
+    <Content Include="Samples\Letters\8_het\accurate11.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate11.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate12.png" />
+    <Content Include="Samples\Letters\8_het\accurate12.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate12.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate13.png" />
+    <Content Include="Samples\Letters\8_het\accurate13.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate13.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate14.png" />
+    <Content Include="Samples\Letters\8_het\accurate14.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate14.xml" />
+    <Resource Include="Samples\Letters\8_het\ACCURATE15.png" />
+    <Content Include="Samples\Letters\8_het\ACCURATE15.wav" />
+    <Resource Include="Samples\Letters\8_het\ACCURATE15.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate16.png" />
+    <Content Include="Samples\Letters\8_het\accurate16.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate16.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate17.png" />
+    <Content Include="Samples\Letters\8_het\accurate17.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate17.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate19.png" />
+    <Content Include="Samples\Letters\8_het\accurate19.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate19.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate21.png" />
+    <Content Include="Samples\Letters\8_het\accurate21.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate21.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate3.png" />
+    <Content Include="Samples\Letters\8_het\accurate3.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate3.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate7.png" />
+    <Content Include="Samples\Letters\8_het\accurate7.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate7.xml" />
+    <Resource Include="Samples\Letters\8_het\accurate9.png" />
+    <Content Include="Samples\Letters\8_het\accurate9.wav" />
+    <Resource Include="Samples\Letters\8_het\accurate9.xml" />
+    <Resource Include="Samples\Letters\8_het\regular15.png" />
+    <Content Include="Samples\Letters\8_het\regular15.wav" />
+    <Resource Include="Samples\Letters\8_het\regular15.xml" />
+    <Resource Include="Samples\Letters\8_het\regular17.png" />
+    <Content Include="Samples\Letters\8_het\regular17.wav" />
+    <Resource Include="Samples\Letters\8_het\regular17.xml" />
+    <Resource Include="Samples\Letters\8_het\regular18.png" />
+    <Content Include="Samples\Letters\8_het\regular18.wav" />
+    <Resource Include="Samples\Letters\8_het\regular18.xml" />
+    <Resource Include="Samples\Letters\8_het\regular3.png" />
+    <Content Include="Samples\Letters\8_het\regular3.wav" />
+    <Resource Include="Samples\Letters\8_het\regular3.xml" />
+    <Resource Include="Samples\Letters\8_het\simple.png" />
+    <Content Include="Samples\Letters\8_het\simple.wav" />
+    <Resource Include="Samples\Letters\8_het\simple.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate10.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate10.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate10.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate12-ashkenazi.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate12-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate12-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate13.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate13.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate13.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate15.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate15.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate15.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate16-sfaradi.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate16-sfaradi.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate16-sfaradi.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate19.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate19.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate19.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate21.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate21.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate21.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate23.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate23.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate23.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate7.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate7.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate7.xml" />
+    <Resource Include="Samples\Letters\90_zadi\accurate9.png" />
+    <Content Include="Samples\Letters\90_zadi\accurate9.wav" />
+    <Resource Include="Samples\Letters\90_zadi\accurate9.xml" />
+    <Resource Include="Samples\Letters\90_zadi\regular6.png" />
+    <Content Include="Samples\Letters\90_zadi\regular6.wav" />
+    <Resource Include="Samples\Letters\90_zadi\regular6.xml" />
+    <Resource Include="Samples\Letters\90_zadi\simple-ashkenazi.png" />
+    <Content Include="Samples\Letters\90_zadi\simple-ashkenazi.wav" />
+    <Resource Include="Samples\Letters\90_zadi\simple-ashkenazi.xml" />
+    <Resource Include="Samples\Letters\90_zadi\simple-disconnected-because-of-generated-silence.png" />
+    <Content Include="Samples\Letters\90_zadi\simple-disconnected-because-of-generated-silence.wav" />
+    <Resource Include="Samples\Letters\90_zadi\simple-disconnected-because-of-generated-silence.xml" />
+    <Resource Include="Samples\Letters\90_zadi\simple-sofit.png" />
+    <Content Include="Samples\Letters\90_zadi\simple-sofit.wav" />
+    <Resource Include="Samples\Letters\90_zadi\simple-sofit.xml" />
+    <Resource Include="Samples\Letters\90_zadi\simple.png" />
+    <Content Include="Samples\Letters\90_zadi\simple.wav" />
+    <Resource Include="Samples\Letters\90_zadi\simple.xml" />
+    <Resource Include="Samples\Letters\90_zadi\sofit34.png" />
+    <Content Include="Samples\Letters\90_zadi\sofit34.wav" />
+    <Resource Include="Samples\Letters\90_zadi\sofit34.xml" />
+    <Resource Include="Samples\Letters\90_zadi\sofit7.png" />
+    <Content Include="Samples\Letters\90_zadi\sofit7.wav" />
+    <Resource Include="Samples\Letters\90_zadi\sofit7.xml" />
+    <Resource Include="Samples\Letters\9_tet\regular23.png" />
+    <Content Include="Samples\Letters\9_tet\regular23.wav" />
+    <Resource Include="Samples\Letters\9_tet\regular23.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi1.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi1.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi1.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi2.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi2.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi2.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi3.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi3.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi3.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi4.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi4.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi4.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi5.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi5.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi5.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi6.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi6.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi6.xml" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi7.png" />
+    <Content Include="Samples\Letters\9_tet\sfaradi7.wav" />
+    <Resource Include="Samples\Letters\9_tet\sfaradi7.xml" />
+    <Resource Include="Samples\Letters\9_tet\simple.png" />
+    <Content Include="Samples\Letters\9_tet\simple.wav" />
+    <Resource Include="Samples\Letters\9_tet\simple.xml" />
+    <Resource Include="Samples\Nikud\hataf\regular1.png" />
+    <Content Include="Samples\Nikud\hataf\regular1.wav" />
+    <Resource Include="Samples\Nikud\hataf\regular1.xml" />
+    <Resource Include="Samples\Nikud\hataf\regular2.png" />
+    <Content Include="Samples\Nikud\hataf\regular2.wav" />
+    <Resource Include="Samples\Nikud\hataf\regular2.xml" />
+    <Resource Include="Samples\Nikud\hataf\regular3.png" />
+    <Content Include="Samples\Nikud\hataf\regular3.wav" />
+    <Resource Include="Samples\Nikud\hataf\regular3.xml" />
+    <Resource Include="Samples\Nikud\hataf\simple.png" />
+    <Content Include="Samples\Nikud\hataf\simple.wav" />
+    <Resource Include="Samples\Nikud\hataf\simple.xml" />
+    <Resource Include="Samples\Nikud\hirik\male10.png" />
+    <Content Include="Samples\Nikud\hirik\male10.wav" />
+    <Resource Include="Samples\Nikud\hirik\male10.xml" />
+    <Resource Include="Samples\Nikud\hirik\male11.png" />
+    <Content Include="Samples\Nikud\hirik\male11.wav" />
+    <Resource Include="Samples\Nikud\hirik\male11.xml" />
+    <Resource Include="Samples\Nikud\hirik\male13.png" />
+    <Content Include="Samples\Nikud\hirik\male13.wav" />
+    <Resource Include="Samples\Nikud\hirik\male13.xml" />
+    <Resource Include="Samples\Nikud\hirik\male14.png" />
+    <Content Include="Samples\Nikud\hirik\male14.wav" />
+    <Resource Include="Samples\Nikud\hirik\male14.xml" />
+    <Resource Include="Samples\Nikud\hirik\male5.png" />
+    <Content Include="Samples\Nikud\hirik\male5.wav" />
+    <Resource Include="Samples\Nikud\hirik\male5.xml" />
+    <Resource Include="Samples\Nikud\hirik\male9.png" />
+    <Content Include="Samples\Nikud\hirik\male9.wav" />
+    <Resource Include="Samples\Nikud\hirik\male9.xml" />
+    <Resource Include="Samples\Nikud\hirik\simple-haser.png" />
+    <Content Include="Samples\Nikud\hirik\simple-haser.wav" />
+    <Resource Include="Samples\Nikud\hirik\simple-haser.xml" />
+    <Resource Include="Samples\Nikud\hirik\simple-male.png" />
+    <Content Include="Samples\Nikud\hirik\simple-male.wav" />
+    <Resource Include="Samples\Nikud\hirik\simple-male.xml" />
+    <Resource Include="Samples\Nikud\holam\male4.png" />
+    <Content Include="Samples\Nikud\holam\male4.wav" />
+    <Resource Include="Samples\Nikud\holam\male4.xml" />
+    <Resource Include="Samples\Nikud\holam\male5.png" />
+    <Content Include="Samples\Nikud\holam\male5.wav" />
+    <Resource Include="Samples\Nikud\holam\male5.xml" />
+    <Resource Include="Samples\Nikud\holam\male6.png" />
+    <Content Include="Samples\Nikud\holam\male6.wav" />
+    <Resource Include="Samples\Nikud\holam\male6.xml" />
+    <Resource Include="Samples\Nikud\holam\simple-haser.png" />
+    <Content Include="Samples\Nikud\holam\simple-haser.wav" />
+    <Resource Include="Samples\Nikud\holam\simple-haser.xml" />
+    <Resource Include="Samples\Nikud\holam\simple-male.png" />
+    <Content Include="Samples\Nikud\holam\simple-male.wav" />
+    <Resource Include="Samples\Nikud\holam\simple-male.xml" />
+    <Resource Include="Samples\Nikud\kamaz\simple.png" />
+    <Content Include="Samples\Nikud\kamaz\simple.wav" />
+    <Resource Include="Samples\Nikud\kamaz\simple.xml" />
+    <Resource Include="Samples\Nikud\kubuz\regular1.png" />
+    <Content Include="Samples\Nikud\kubuz\regular1.wav" />
+    <Resource Include="Samples\Nikud\kubuz\regular1.xml" />
+    <Resource Include="Samples\Nikud\kubuz\regular2.png" />
+    <Content Include="Samples\Nikud\kubuz\regular2.wav" />
+    <Resource Include="Samples\Nikud\kubuz\regular2.xml" />
+    <Resource Include="Samples\Nikud\kubuz\regular3.png" />
+    <Content Include="Samples\Nikud\kubuz\regular3.wav" />
+    <Resource Include="Samples\Nikud\kubuz\regular3.xml" />
+    <Resource Include="Samples\Nikud\kubuz\regular4.png" />
+    <Content Include="Samples\Nikud\kubuz\regular4.wav" />
+    <Resource Include="Samples\Nikud\kubuz\regular4.xml" />
+    <Resource Include="Samples\Nikud\kubuz\regular5.png" />
+    <Content Include="Samples\Nikud\kubuz\regular5.wav" />
+    <Resource Include="Samples\Nikud\kubuz\regular5.xml" />
+    <Resource Include="Samples\Nikud\kubuz\simple.png" />
+    <Content Include="Samples\Nikud\kubuz\simple.wav" />
+    <Resource Include="Samples\Nikud\kubuz\simple.xml" />
+    <Resource Include="Samples\Nikud\pathah\simple.png" />
+    <Content Include="Samples\Nikud\pathah\simple.wav" />
+    <Resource Include="Samples\Nikud\pathah\simple.xml" />
+    <Resource Include="Samples\Nikud\segol\simple.png" />
+    <Content Include="Samples\Nikud\segol\simple.wav" />
+    <Resource Include="Samples\Nikud\segol\simple.xml" />
+    <Resource Include="Samples\Nikud\shewa\regular1.png" />
+    <Content Include="Samples\Nikud\shewa\regular1.wav" />
+    <Resource Include="Samples\Nikud\shewa\regular1.xml" />
+    <Resource Include="Samples\Nikud\shewa\regular2.png" />
+    <Content Include="Samples\Nikud\shewa\regular2.wav" />
+    <Resource Include="Samples\Nikud\shewa\regular2.xml" />
+    <Resource Include="Samples\Nikud\shewa\regular3.png" />
+    <Content Include="Samples\Nikud\shewa\regular3.wav" />
+    <Resource Include="Samples\Nikud\shewa\regular3.xml" />
+    <Resource Include="Samples\Nikud\shewa\regular4.png" />
+    <Content Include="Samples\Nikud\shewa\regular4.wav" />
+    <Resource Include="Samples\Nikud\shewa\regular4.xml" />
+    <Resource Include="Samples\Nikud\shewa\regular5.png" />
+    <Content Include="Samples\Nikud\shewa\regular5.wav" />
+    <Resource Include="Samples\Nikud\shewa\regular5.xml" />
+    <Resource Include="Samples\Nikud\shewa\simple.png" />
+    <Content Include="Samples\Nikud\shewa\simple.wav" />
+    <Resource Include="Samples\Nikud\shewa\simple.xml" />
+    <Resource Include="Samples\Nikud\shuruk\haser2.png" />
+    <Content Include="Samples\Nikud\shuruk\haser2.wav" />
+    <Resource Include="Samples\Nikud\shuruk\haser2.xml" />
+    <Resource Include="Samples\Nikud\shuruk\male1.png" />
+    <Content Include="Samples\Nikud\shuruk\male1.wav" />
+    <Resource Include="Samples\Nikud\shuruk\male1.xml" />
+    <Resource Include="Samples\Nikud\shuruk\male2.png" />
+    <Content Include="Samples\Nikud\shuruk\male2.wav" />
+    <Resource Include="Samples\Nikud\shuruk\male2.xml" />
+    <Resource Include="Samples\Nikud\shuruk\simple-haser.png" />
+    <Content Include="Samples\Nikud\shuruk\simple-haser.wav" />
+    <Resource Include="Samples\Nikud\shuruk\simple-haser.xml" />
+    <Resource Include="Samples\Nikud\shuruk\simple-male.png" />
+    <Content Include="Samples\Nikud\shuruk\simple-male.wav" />
+    <Resource Include="Samples\Nikud\shuruk\simple-male.xml" />
+    <Resource Include="Samples\Nikud\zere\male4.png" />
+    <Content Include="Samples\Nikud\zere\male4.wav" />
+    <Resource Include="Samples\Nikud\zere\male4.xml" />
+    <Resource Include="Samples\Nikud\zere\male5.png" />
+    <Content Include="Samples\Nikud\zere\male5.wav" />
+    <Resource Include="Samples\Nikud\zere\male5.xml" />
+    <Resource Include="Samples\Nikud\zere\regular2.png" />
+    <Content Include="Samples\Nikud\zere\regular2.wav" />
+    <Resource Include="Samples\Nikud\zere\regular2.xml" />
+    <Resource Include="Samples\Nikud\zere\regular3.png" />
+    <Content Include="Samples\Nikud\zere\regular3.wav" />
+    <Resource Include="Samples\Nikud\zere\regular3.xml" />
+    <Resource Include="Samples\Nikud\zere\regular6.png" />
+    <Content Include="Samples\Nikud\zere\regular6.wav" />
+    <Resource Include="Samples\Nikud\zere\regular6.xml" />
+    <Resource Include="Samples\Nikud\zere\simple-haser.png" />
+    <Content Include="Samples\Nikud\zere\simple-haser.wav" />
+    <Resource Include="Samples\Nikud\zere\simple-haser.xml" />
+    <Resource Include="Samples\Nikud\zere\simple-male.png" />
+    <Content Include="Samples\Nikud\zere\simple-male.wav" />
+    <Resource Include="Samples\Nikud\zere\simple-male.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\1.png" />
+    <Content Include="Samples\Psukim\Ana behoah\1.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\1.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\10.png" />
+    <Content Include="Samples\Psukim\Ana behoah\10.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\10.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\11.png" />
+    <Content Include="Samples\Psukim\Ana behoah\11.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\11.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\12.png" />
+    <Content Include="Samples\Psukim\Ana behoah\12.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\12.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\13.png" />
+    <Content Include="Samples\Psukim\Ana behoah\13.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\13.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\14-2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\14-2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\14-2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\14.png" />
+    <Content Include="Samples\Psukim\Ana behoah\14.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\14.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\15.png" />
+    <Content Include="Samples\Psukim\Ana behoah\15.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\15.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\16.png" />
+    <Content Include="Samples\Psukim\Ana behoah\16.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\16.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\17.png" />
+    <Content Include="Samples\Psukim\Ana behoah\17.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\17.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\18.png" />
+    <Content Include="Samples\Psukim\Ana behoah\18.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\18.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\19.png" />
+    <Content Include="Samples\Psukim\Ana behoah\19.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\19.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\20.png" />
+    <Content Include="Samples\Psukim\Ana behoah\20.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\20.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\21-2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\21-2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\21-2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\21.png" />
+    <Content Include="Samples\Psukim\Ana behoah\21.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\21.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\3-2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\3-2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\3-2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\3.png" />
+    <Content Include="Samples\Psukim\Ana behoah\3.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\3.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\4-2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\4-2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\4-2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\4.png" />
+    <Content Include="Samples\Psukim\Ana behoah\4.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\4.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\5.png" />
+    <Content Include="Samples\Psukim\Ana behoah\5.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\5.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\6.png" />
+    <Content Include="Samples\Psukim\Ana behoah\6.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\6.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\7.png" />
+    <Content Include="Samples\Psukim\Ana behoah\7.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\7.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\8-2.png" />
+    <Content Include="Samples\Psukim\Ana behoah\8-2.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\8-2.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\8.png" />
+    <Content Include="Samples\Psukim\Ana behoah\8.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\8.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\9.png" />
+    <Content Include="Samples\Psukim\Ana behoah\9.wav" />
+    <Resource Include="Samples\Psukim\Ana behoah\9.xml" />
+    <Resource Include="Samples\Psukim\Ana behoah\text.txt" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular12.png" />
+    <Content Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular12.wav" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular12.xml" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular4.png" />
+    <Content Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular4.wav" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular4.xml" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular7.png" />
+    <Content Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular7.wav" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular7.xml" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular8.png" />
+    <Content Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular8.wav" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\regular8.xml" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\simple.png" />
+    <Content Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\simple.wav" />
+    <Resource Include="Samples\Psukim\bamidbar 8 4 - ze maase hamenora - no waw\simple.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\1het.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het2.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\1het2.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het2.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het3.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\1het3.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\1het3.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe-sofit.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\2pe-sofit.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe-sofit.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe1.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\2pe1.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe1.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe2.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\2pe2.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe2.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe3.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\2pe3.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\2pe3.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe-sofit.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\3pe-sofit.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe-sofit.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe1.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\3pe1.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe1.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe2.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\3pe2.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\3pe2.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf1.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\4kuf1.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf1.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf2.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\4kuf2.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf2.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf3-ashkenazi.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\4kuf3-ashkenazi.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf3-ashkenazi.xml" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf4.png" />
+    <Content Include="Samples\Psukim\bereshit 1 1\4kuf4.wav" />
+    <Resource Include="Samples\Psukim\bereshit 1 1\4kuf4.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\1yud.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\1yud.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\1yud.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\1yud2.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\1yud2.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\1yud2.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\2he2.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\2he2.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\2he2.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\2he3.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\2he3.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\2he3.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\3waw.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\3waw.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\3waw.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\3waw2.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\3waw2.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\3waw2.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\4he.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\4he.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\4he.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\4he2.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\4he2.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\4he2.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\5he4.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\5he4.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\5he4.xml" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\hashem-ehad-he.png" />
+    <Content Include="Samples\Psukim\devarim 6 4 - shema israel\hashem-ehad-he.wav" />
+    <Resource Include="Samples\Psukim\devarim 6 4 - shema israel\hashem-ehad-he.xml" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\1het.png" />
+    <Content Include="Samples\Psukim\divrei hayamim 1 1 1\1het.wav" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\1het.xml" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem-sofit.png" />
+    <Content Include="Samples\Psukim\divrei hayamim 1 1 1\2mem-sofit.wav" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem-sofit.xml" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem1.png" />
+    <Content Include="Samples\Psukim\divrei hayamim 1 1 1\2mem1.wav" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem1.xml" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem2-ashkenai.png" />
+    <Content Include="Samples\Psukim\divrei hayamim 1 1 1\2mem2-ashkenai.wav" />
+    <Resource Include="Samples\Psukim\divrei hayamim 1 1 1\2mem2-ashkenai.xml" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin1.png" />
+    <Content Include="Samples\Psukim\tehilim 145 16\1shin1.wav" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin1.xml" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin2.png" />
+    <Content Include="Samples\Psukim\tehilim 145 16\1shin2.wav" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin2.xml" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin3.png" />
+    <Content Include="Samples\Psukim\tehilim 145 16\1shin3.wav" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin3.xml" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin4heads.png" />
+    <Content Include="Samples\Psukim\tehilim 145 16\1shin4heads.wav" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\1shin4heads.xml" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\2shin1.png" />
+    <Content Include="Samples\Psukim\tehilim 145 16\2shin1.wav" />
+    <Resource Include="Samples\Psukim\tehilim 145 16\2shin1.xml" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain1.png" />
+    <Content Include="Samples\Psukim\yehoshua 15 29\1ain1.wav" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain1.xml" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain2.png" />
+    <Content Include="Samples\Psukim\yehoshua 15 29\1ain2.wav" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain2.xml" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain3.png" />
+    <Content Include="Samples\Psukim\yehoshua 15 29\1ain3.wav" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\1ain3.xml" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\2ain1.png" />
+    <Content Include="Samples\Psukim\yehoshua 15 29\2ain1.wav" />
+    <Resource Include="Samples\Psukim\yehoshua 15 29\2ain1.xml" />
+    <Resource Include="Samples\Teamim\athnahta\big.png" />
+    <Content Include="Samples\Teamim\athnahta\big.wav" />
+    <Resource Include="Samples\Teamim\athnahta\big.xml" />
+    <Resource Include="Samples\Teamim\athnahta\simple.png" />
+    <Content Include="Samples\Teamim\athnahta\simple.wav" />
+    <Resource Include="Samples\Teamim\athnahta\simple.xml" />
+    <Resource Include="Samples\Teamim\athnahta\small.png" />
+    <Content Include="Samples\Teamim\athnahta\small.wav" />
+    <Resource Include="Samples\Teamim\athnahta\small.xml" />
+    <Resource Include="Samples\Teamim\azla\regular2.png" />
+    <Content Include="Samples\Teamim\azla\regular2.wav" />
+    <Resource Include="Samples\Teamim\azla\regular2.xml" />
+    <Resource Include="Samples\Teamim\azla\simple.png" />
+    <Content Include="Samples\Teamim\azla\simple.wav" />
+    <Resource Include="Samples\Teamim\azla\simple.xml" />
+    <Resource Include="Samples\Teamim\Darga\simple.png" />
+    <Content Include="Samples\Teamim\Darga\simple.wav" />
+    <Resource Include="Samples\Teamim\Darga\simple.xml" />
+    <Resource Include="Samples\Teamim\dehi\simple.png" />
+    <Content Include="Samples\Teamim\dehi\simple.wav" />
+    <Resource Include="Samples\Teamim\dehi\simple.xml" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\gerish1.png" />
+    <Content Include="Samples\Teamim\geresh-gerish-ate\gerish1.wav" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\gerish1.xml" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\simple-ate.png" />
+    <Content Include="Samples\Teamim\geresh-gerish-ate\simple-ate.wav" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\simple-ate.xml" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\simple-gerish.png" />
+    <Content Include="Samples\Teamim\geresh-gerish-ate\simple-gerish.wav" />
+    <Resource Include="Samples\Teamim\geresh-gerish-ate\simple-gerish.xml" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim5.png" />
+    <Content Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim5.wav" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim5.xml" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim6.png" />
+    <Content Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim6.wav" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\gershaim6.xml" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\simple-gershaim.png" />
+    <Content Include="Samples\Teamim\gershaim-gerishin-tirsin\simple-gershaim.wav" />
+    <Resource Include="Samples\Teamim\gershaim-gerishin-tirsin\simple-gershaim.xml" />
+    <Resource Include="Samples\Teamim\ilui\simple.png" />
+    <Content Include="Samples\Teamim\ilui\simple.wav" />
+    <Resource Include="Samples\Teamim\ilui\simple.xml" />
+    <Resource Include="Samples\Teamim\kadma-pishta\simple-kadma.png" />
+    <Content Include="Samples\Teamim\kadma-pishta\simple-kadma.wav" />
+    <Resource Include="Samples\Teamim\kadma-pishta\simple-kadma.xml" />
+    <Resource Include="Samples\Teamim\kadma-pishta\simple-pishta.png" />
+    <Content Include="Samples\Teamim\kadma-pishta\simple-pishta.wav" />
+    <Resource Include="Samples\Teamim\kadma-pishta\simple-pishta.xml" />
+    <Resource Include="Samples\Teamim\maarih-merha\merha2.png" />
+    <Content Include="Samples\Teamim\maarih-merha\merha2.wav" />
+    <Resource Include="Samples\Teamim\maarih-merha\merha2.xml" />
+    <Resource Include="Samples\Teamim\maarih-merha\simple-maarih.png" />
+    <Content Include="Samples\Teamim\maarih-merha\simple-maarih.wav" />
+    <Resource Include="Samples\Teamim\maarih-merha\simple-maarih.xml" />
+    <Resource Include="Samples\Teamim\maarih-merha\simple-merha.png" />
+    <Content Include="Samples\Teamim\maarih-merha\simple-merha.wav" />
+    <Resource Include="Samples\Teamim\maarih-merha\simple-merha.xml" />
+    <Resource Include="Samples\Teamim\ole\simple.png" />
+    <Content Include="Samples\Teamim\ole\simple.wav" />
+    <Resource Include="Samples\Teamim\ole\simple.xml" />
+    <Resource Include="Samples\Teamim\pasek\simple.png" />
+    <Content Include="Samples\Teamim\pasek\simple.wav" />
+    <Resource Include="Samples\Teamim\pasek\simple.xml" />
+    <Resource Include="Samples\Teamim\pazer\regular2.png" />
+    <Content Include="Samples\Teamim\pazer\regular2.wav" />
+    <Resource Include="Samples\Teamim\pazer\regular2.xml" />
+    <Resource Include="Samples\Teamim\pazer\simple.png" />
+    <Content Include="Samples\Teamim\pazer\simple.wav" />
+    <Resource Include="Samples\Teamim\pazer\simple.xml" />
+    <Resource Include="Samples\Teamim\revia\regular1.png" />
+    <Content Include="Samples\Teamim\revia\regular1.wav" />
+    <Resource Include="Samples\Teamim\revia\regular1.xml" />
+    <Resource Include="Samples\Teamim\revia\simple.png" />
+    <Content Include="Samples\Teamim\revia\simple.wav" />
+    <Resource Include="Samples\Teamim\revia\simple.xml" />
+    <Resource Include="Samples\Teamim\segol-segolta\simple-segol.png" />
+    <Content Include="Samples\Teamim\segol-segolta\simple-segol.wav" />
+    <Resource Include="Samples\Teamim\segol-segolta\simple-segol.xml" />
+    <Resource Include="Samples\Teamim\shalshelet\almost.png" />
+    <Content Include="Samples\Teamim\shalshelet\almost.wav" />
+    <Resource Include="Samples\Teamim\shalshelet\almost.xml" />
+    <Resource Include="Samples\Teamim\shalshelet\regular2.png" />
+    <Content Include="Samples\Teamim\shalshelet\regular2.wav" />
+    <Resource Include="Samples\Teamim\shalshelet\regular2.xml" />
+    <Resource Include="Samples\Teamim\shalshelet\regular3.png" />
+    <Content Include="Samples\Teamim\shalshelet\regular3.wav" />
+    <Resource Include="Samples\Teamim\shalshelet\regular3.xml" />
+    <Resource Include="Samples\Teamim\shalshelet\simple.png" />
+    <Content Include="Samples\Teamim\shalshelet\simple.wav" />
+    <Resource Include="Samples\Teamim\shalshelet\simple.xml" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah6.png" />
+    <Content Include="Samples\Teamim\shofar\shofar-mehupah6.wav" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah6.xml" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah7.png" />
+    <Content Include="Samples\Teamim\shofar\shofar-mehupah7.wav" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah7.xml" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah8.png" />
+    <Content Include="Samples\Teamim\shofar\shofar-mehupah8.wav" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah8.xml" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah9.png" />
+    <Content Include="Samples\Teamim\shofar\shofar-mehupah9.wav" />
+    <Resource Include="Samples\Teamim\shofar\shofar-mehupah9.xml" />
+    <Resource Include="Samples\Teamim\shofar\simple-mehupah.png" />
+    <Content Include="Samples\Teamim\shofar\simple-mehupah.wav" />
+    <Resource Include="Samples\Teamim\shofar\simple-mehupah.xml" />
+    <Resource Include="Samples\Teamim\shofar\simple.png" />
+    <Content Include="Samples\Teamim\shofar\simple.wav" />
+    <Resource Include="Samples\Teamim\shofar\simple.xml" />
+    <Resource Include="Samples\Teamim\siluk\simple.png" />
+    <Content Include="Samples\Teamim\siluk\simple.wav" />
+    <Resource Include="Samples\Teamim\siluk\simple.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular2.png" />
+    <Content Include="Samples\Teamim\tevir\regular2.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular2.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular3.png" />
+    <Content Include="Samples\Teamim\tevir\regular3.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular3.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular4.png" />
+    <Content Include="Samples\Teamim\tevir\regular4.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular4.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular5.png" />
+    <Content Include="Samples\Teamim\tevir\regular5.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular5.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular6.png" />
+    <Content Include="Samples\Teamim\tevir\regular6.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular6.xml" />
+    <Resource Include="Samples\Teamim\tevir\regular7.png" />
+    <Content Include="Samples\Teamim\tevir\regular7.wav" />
+    <Resource Include="Samples\Teamim\tevir\regular7.xml" />
+    <Resource Include="Samples\Teamim\tevir\simple.png" />
+    <Content Include="Samples\Teamim\tevir\simple.wav" />
+    <Resource Include="Samples\Teamim\tevir\simple.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\simple-tarha.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\simple-tarha.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\simple-tarha.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\simple-tifha.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\simple-tifha.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\simple-tifha.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha2.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\tarha2.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha2.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha3.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\tarha3.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha3.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha4.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\tarha4.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha4.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha5.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\tarha5.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tarha5.xml" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tifha2.png" />
+    <Content Include="Samples\Teamim\tifha-tarha\tifha2.wav" />
+    <Resource Include="Samples\Teamim\tifha-tarha\tifha2.xml" />
+    <Resource Include="Samples\Teamim\tilsha\both.png" />
+    <Content Include="Samples\Teamim\tilsha\both.wav" />
+    <Resource Include="Samples\Teamim\tilsha\both.xml" />
+    <Resource Include="Samples\Teamim\tilsha\gedola2.png" />
+    <Content Include="Samples\Teamim\tilsha\gedola2.wav" />
+    <Resource Include="Samples\Teamim\tilsha\gedola2.xml" />
+    <Resource Include="Samples\Teamim\tilsha\gedola3.png" />
+    <Content Include="Samples\Teamim\tilsha\gedola3.wav" />
+    <Resource Include="Samples\Teamim\tilsha\gedola3.xml" />
+    <Resource Include="Samples\Teamim\tilsha\ketana2.png" />
+    <Content Include="Samples\Teamim\tilsha\ketana2.wav" />
+    <Resource Include="Samples\Teamim\tilsha\ketana2.xml" />
+    <Resource Include="Samples\Teamim\tilsha\simple-gedola.png" />
+    <Content Include="Samples\Teamim\tilsha\simple-gedola.wav" />
+    <Resource Include="Samples\Teamim\tilsha\simple-gedola.xml" />
+    <Resource Include="Samples\Teamim\tilsha\simple-ketana.png" />
+    <Content Include="Samples\Teamim\tilsha\simple-ketana.wav" />
+    <Resource Include="Samples\Teamim\tilsha\simple-ketana.xml" />
+    <Resource Include="Samples\Teamim\yethiv\simple.png" />
+    <Content Include="Samples\Teamim\yethiv\simple.wav" />
+    <Resource Include="Samples\Teamim\yethiv\simple.xml" />
+    <Resource Include="Samples\Teamim\zakef\gadol2.png" />
+    <Content Include="Samples\Teamim\zakef\gadol2.wav" />
+    <Resource Include="Samples\Teamim\zakef\gadol2.xml" />
+    <Resource Include="Samples\Teamim\zakef\gadol3.png" />
+    <Content Include="Samples\Teamim\zakef\gadol3.wav" />
+    <Resource Include="Samples\Teamim\zakef\gadol3.xml" />
+    <Resource Include="Samples\Teamim\zakef\gadol4.png" />
+    <Content Include="Samples\Teamim\zakef\gadol4.wav" />
+    <Resource Include="Samples\Teamim\zakef\gadol4.xml" />
+    <Resource Include="Samples\Teamim\zakef\gadol5.png" />
+    <Content Include="Samples\Teamim\zakef\gadol5.wav" />
+    <Resource Include="Samples\Teamim\zakef\gadol5.xml" />
+    <Resource Include="Samples\Teamim\zakef\gadol6.png" />
+    <Content Include="Samples\Teamim\zakef\gadol6.wav" />
+    <Resource Include="Samples\Teamim\zakef\gadol6.xml" />
+    <Resource Include="Samples\Teamim\zakef\katan2.png" />
+    <Content Include="Samples\Teamim\zakef\katan2.wav" />
+    <Resource Include="Samples\Teamim\zakef\katan2.xml" />
+    <Resource Include="Samples\Teamim\zakef\katan3.png" />
+    <Content Include="Samples\Teamim\zakef\katan3.wav" />
+    <Resource Include="Samples\Teamim\zakef\katan3.xml" />
+    <Resource Include="Samples\Teamim\zakef\katan4.png" />
+    <Content Include="Samples\Teamim\zakef\katan4.wav" />
+    <Resource Include="Samples\Teamim\zakef\katan4.xml" />
+    <Resource Include="Samples\Teamim\zakef\katan5.png" />
+    <Content Include="Samples\Teamim\zakef\katan5.wav" />
+    <Resource Include="Samples\Teamim\zakef\katan5.xml" />
+    <Resource Include="Samples\Teamim\zakef\katan6.png" />
+    <Content Include="Samples\Teamim\zakef\katan6.wav" />
+    <Resource Include="Samples\Teamim\zakef\katan6.xml" />
+    <Resource Include="Samples\Teamim\zakef\simple-gadol.png" />
+    <Content Include="Samples\Teamim\zakef\simple-gadol.wav" />
+    <Resource Include="Samples\Teamim\zakef\simple-gadol.xml" />
+    <Resource Include="Samples\Teamim\zakef\simple-katan.png" />
+    <Content Include="Samples\Teamim\zakef\simple-katan.wav" />
+    <Resource Include="Samples\Teamim\zakef\simple-katan.xml" />
+    <Resource Include="Samples\Teamim\zarka\simple-two-sides.png" />
+    <Content Include="Samples\Teamim\zarka\simple-two-sides.wav" />
+    <Resource Include="Samples\Teamim\zarka\simple-two-sides.xml" />
+    <Resource Include="Samples\Teamim\zarka\simple.png" />
+    <Content Include="Samples\Teamim\zarka\simple.wav" />
+    <Resource Include="Samples\Teamim\zarka\simple.xml" />
+    <Resource Include="Samples\Words\Athnuth\he10.png" />
+    <Resource Include="Samples\TextFile1.txt" />
+    <Content Include="Samples\Words\Athnuth\he10.wav" />
+    <Resource Include="Samples\Words\Athnuth\he10.xml" />
+    <Resource Include="Samples\Words\Athnuth\he11.png" />
+    <Content Include="Samples\Words\Athnuth\he11.wav" />
+    <Resource Include="Samples\Words\Athnuth\he11.xml" />
+    <Resource Include="Samples\Words\Athnuth\he12.png" />
+    <Content Include="Samples\Words\Athnuth\he12.wav" />
+    <Resource Include="Samples\Words\Athnuth\he12.xml" />
+    <Resource Include="Samples\Words\Athnuth\he13.png" />
+    <Content Include="Samples\Words\Athnuth\he13.wav" />
+    <Resource Include="Samples\Words\Athnuth\he13.xml" />
+    <Resource Include="Samples\Words\Athnuth\he14.png" />
+    <Content Include="Samples\Words\Athnuth\he14.wav" />
+    <Resource Include="Samples\Words\Athnuth\he14.xml" />
+    <Resource Include="Samples\Words\Athnuth\he3.png" />
+    <Content Include="Samples\Words\Athnuth\he3.wav" />
+    <Resource Include="Samples\Words\Athnuth\he3.xml" />
+    <Resource Include="Samples\Words\Athnuth\he4.png" />
+    <Content Include="Samples\Words\Athnuth\he4.wav" />
+    <Resource Include="Samples\Words\Athnuth\he4.xml" />
+    <Resource Include="Samples\Words\Athnuth\he6.png" />
+    <Content Include="Samples\Words\Athnuth\he6.wav" />
+    <Resource Include="Samples\Words\Athnuth\he6.xml" />
+    <Resource Include="Samples\Words\Athnuth\he7.png" />
+    <Content Include="Samples\Words\Athnuth\he7.wav" />
+    <Resource Include="Samples\Words\Athnuth\he7.xml" />
+    <Resource Include="Samples\Words\Athnuth\he8.png" />
+    <Content Include="Samples\Words\Athnuth\he8.wav" />
+    <Resource Include="Samples\Words\Athnuth\he8.xml" />
+    <Resource Include="Samples\Words\Athnuth\he9.png" />
+    <Content Include="Samples\Words\Athnuth\he9.wav" />
+    <Resource Include="Samples\Words\Athnuth\he9.xml" />
+    <Resource Include="Samples\Words\menora\simple.png" />
+    <Content Include="Samples\Words\menora\simple.wav" />
+    <Resource Include="Samples\Words\menora\simple.xml" />
+    <Resource Include="Samples\Words\Shabath\kuf1.png" />
+    <Content Include="Samples\Words\Shabath\kuf1.wav" />
+    <Resource Include="Samples\Words\Shabath\kuf1.xml" />
+    <Resource Include="Samples\Words\Shabath\kuf2.png" />
+    <Content Include="Samples\Words\Shabath\kuf2.wav" />
+    <Resource Include="Samples\Words\Shabath\kuf2.xml" />
+    <Resource Include="Samples\Words\Yerushalayim\he2.png" />
+    <Content Include="Samples\Words\Yerushalayim\he2.wav" />
+    <Resource Include="Samples\Words\Yerushalayim\he2.xml" />
+    <Resource Include="Samples\Words\Yerushalayim\he3.png" />
+    <Content Include="Samples\Words\Yerushalayim\he3.wav" />
+    <Resource Include="Samples\Words\Yerushalayim\he3.xml" />
+    <Resource Include="Samples\Words\Yerushalayim\he4-sfaradi.png" />
+    <Content Include="Samples\Words\Yerushalayim\he4-sfaradi.wav" />
+    <Resource Include="Samples\Words\Yerushalayim\he4-sfaradi.xml" />
+    <Resource Include="Samples\Words\Yerushalayim\he6-nice.png" />
+    <Content Include="Samples\Words\Yerushalayim\he6-nice.wav" />
+    <Resource Include="Samples\Words\Yerushalayim\he6-nice.xml" />
+    <Resource Include="Samples\Words\Zion\he1.png" />
+    <Content Include="Samples\Words\Zion\he1.wav" />
+    <Resource Include="Samples\Words\Zion\he1.xml" />
+    <Resource Include="Samples\Words\Zion\he2.png" />
+    <Content Include="Samples\Words\Zion\he2.wav" />
+    <Resource Include="Samples\Words\Zion\he2.xml" />
+    <Resource Include="Samples\Words\Zion\he3.png" />
+    <Content Include="Samples\Words\Zion\he3.wav" />
+    <Resource Include="Samples\Words\Zion\he3.xml" />
+    <Resource Include="Samples\Words\Zion\he4.png" />
+    <Content Include="Samples\Words\Zion\he4.wav" />
+    <Resource Include="Samples\Words\Zion\he4.xml" />
+    <Resource Include="Samples\Words\Zion\he5.png" />
+    <Content Include="Samples\Words\Zion\he5.wav" />
+    <Resource Include="Samples\Words\Zion\he5.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="default.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Samples\Letters\1_alef\simple.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Samples\Letters\1_alef\zbig-with-mess.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Ain-One-MaxMin.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Ain-One-Powers.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Lameth-good.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Lameth-single.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Menora-noise.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Menora-pasuk.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Nun-crown.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Nun-good.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Tutorial\Taf-Like-Ain.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+magRangeChk,false
+blueMagnitudePowerTxt,0.1
+greenMagnitudePowerTxt,0.1
+maxBlueTxt,255
+minBlueTxt,0
+maxGreenTxt,255
+minGreenTxt,0
+!run

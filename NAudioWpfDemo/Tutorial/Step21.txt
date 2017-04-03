@@ -1,0 +1,7 @@
+Step 21
+
+We've imported the settings and the recording of the letter Lameth. The best instance of Lameth, until today, was found when it is not the only thing noticeable in the graph, and it has a lot of noise around it. It can be found at the bottom right corner of the graph, with a lot of mess to its left and beneath it.
+
+One might think that the noise there is really just noise. In the current recording, the parameters' values that would make this noise into an instance of the letter were not found. They were found, however, in a different recording, as we shall see in the next step.
+
+When you're ready, please continue to the next step.

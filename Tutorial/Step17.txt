@@ -1,0 +1,13 @@
+Step 17
+
+Now that is a good one. There are still many legs down there. We can also see a lot of horizontal lines as heads of instances. But, looking at the group of the lower heads, with the nice looking horn to their left, with the top part of the leg, we have an excellent instance.
+
+Please be aware that in the tutorial, we worked on recordings that were known to generate good single instances. Not every recording will do that. For example, in the recording of the Taf, if the last "fff" sound was too much weaker than the sound of the "t", it might have been impossible to reach such an instance.
+
+The Taf is always there, but finding a single instance of it can be difficult. It is easily noticeable that it would be impossible, using our filter, to generate an image of Alef, or Beth, or Gimel, or A, or a, or B, or b, or the sign of Athnahta, or a Menora, etc. The sound of 'Taf' generates many instances of the letter Taf, and the filter is necessary not for the generation of Taf, but for the generation of ONKLY ONE instance of it.
+
+One thing that can help you when finding the letters of the frequencies of the sound waves, is to use a precise accent. A short accent guide is available in the Resources directory of the software, and you can, of course, use the recordings to hear how the words should sound like.
+
+We will now show the same Taf using the min/max magnitude parameters. 
+
+When you're ready, please continue to the next step.

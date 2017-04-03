@@ -1,0 +1,15 @@
+Step 13
+
+If you're perceptive, you can already see it is a Taf at the top of the image.
+
+The problem with it is that there is a lot of noise to its left and beneath it. If we wanted to print the screen and cut a square image of just the Taf, it would be impossible because of that noise.
+
+You may also notice that at the very bottom, there is a really short and wide instance of the letter.
+
+If you are extremely perceptive, when looking at the top of the image, you'll notice that the noise is not really a noise. Look at the horizontal straight lines. With a bit of imagination, you'll notice that each of them is actually the head of one Taf, and the noise is composed of the legs of the many Tafs, and their horns (the Ashuri Taf has a horizontal line going to left of its head, like a horn). 
+
+We will now try to find a recognizable instance of the letter. When there are two many instances of the letter, like there are right now, we need to make the magnitudes range that are displayed more specific. 
+
+We will now increase the power of the blue and green colors, which in turn will make the minimal displayed magnitudes bigger (therefore, less point will be displayed).
+
+When you're ready, please continue to the next step.

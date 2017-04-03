@@ -1,0 +1,13 @@
+Step 22
+
+Now, at the top, it is easy to see there's a single, clean instance of a Lameth. Unlike the previous one, this Lameth is Sfaradi (the difference is in its base. The ashkenazi Lameth has a wide base, the same width as the head, while the sfaradi Lameth has a short, diagonal leg without a horizontal base). It could have been a nice instance, but the problem with it is that it has a disconnection in the middle of its leg.
+
+So the previous instance was much better, if we ignore the noise. What we can find out now is whether the noise of the previous graph was really just noise or was it instances of the letter, and just lacked the right settings to make it recognizable.
+
+If you scroll to the bottom, you'll find out that at the bottom, the instance from the top appears, but it is upside down (as the top is always a vertical mirror of the bottom).
+
+Although the previous image was generated with a window size of 512, and the current one is 1024, the same instance we see here also appears with the smaller window size, only it's wider and shorter. Therefore, it is clear that where the "noise" was in the last image, there's actually an upside-down instance of the letter (which is not upside-up at the vertical mirror of the top), which could not have been discovered given the previous recording (either because of volume differences between the sound of the "LA" and the sound of the "ME" and the sound of the "TH" that build up the whole word Lameth, or because of the length of the recording).
+
+Lets see if we can make this instance into a better one, by connecting its leg's parts together.
+
+When you're ready, please continue to the next step.

@@ -1,0 +1,7 @@
+Step 8
+
+All we did now is enlarge the image, so the image is the same but bigger.
+
+We will now change the window size to a very big value, and adjust the bitmap size accordingly.
+
+When you're ready, please continue to the next step.

@@ -1,0 +1,13 @@
+Step 14
+
+Now this is much better. Notice that the previous instance almost disappeared. What we see now is one of the instances that were on top of the previous best looking instance. Previously we couldn't see anything about the current instance, because it was buried from above and beneath by many instances.
+
+You can also notice that the current instance also consists of many instances. Again, every horizontal line is a head of an instance, and the noisy leg is actually just many legs one on to of the other. You can also notice that below the noisy leg, there is a weak leg of one of the instances. 
+
+In addition, the Ashuri Taf has a horizontal line to left of its head, like a horn. In the previous image, the horns of the many instances were too close to the legs of those instances. Now we see a clear separation between the horns and the legs. 
+
+That said, there is still a big problem with the current image, which is that it is too short relatively to its width (because the recording is very long). If the weak leg wasn't so weak, and the noisy leg would not interfere, the shape could have been excellent, but that is not the case. It will probably look better with a bigger window size that will narrow it and make it taller.
+
+We will now change the window size.
+
+When you're ready, please continue to the next step.
