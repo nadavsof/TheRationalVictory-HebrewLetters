@@ -1,0 +1,11 @@
+Step 24
+
+We now see the best instance that was found, until now, for the letter Nun. 
+
+It can be found around the middle of the top half of the image. 
+
+If you scroll down, you might notice that the head of that Nun can also been seen as the head of another, larger Nun, at the bottom (it is not exactly the same head of course, because the first is at the top and the second is at the bottom, but the top is a vertical mirror of the bottom, and the head of the Nun at the bottom is just a mirror instance of the same head of the Nun at the top).
+
+This Nun was easily recognized by many people, and sentences that contained it were easily read. There is one very unfortunate thing about it - it is missing its crown. The Ashuri Nun has 3 lines going up on top of its head, and this one doesn't have them (for those that noticed the Nun at the bottom - both don't have them). 
+
+When you're ready, please continue to the next step.

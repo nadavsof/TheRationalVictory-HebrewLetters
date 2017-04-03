@@ -1,0 +1,4 @@
+settingsImportPath,Tutorial\Lameth-good.xml
+!import
+filePathTxt,Tutorial\Lameth-good.wav
+!run

@@ -1,0 +1,7 @@
+Step 23
+
+We are now presenting more magnitudes, because the power of the magnitudes is smaller - 1.35 instead of 1.44, and because the max hue of both blue and green is now 5, instead of the previous value of 3.
+
+You can see a really good instance of a sfaradi Lameth. The leg is now connected, and you can notice the diagonal movement of the leg towords the left, and then down, in a very similar way to the sfaradi Lameth. There are still problems with it - the head is only weakly connected to the leg, and the sfaradi style bottom of the leg should be more to the left. The even bigger problem with it, at least when it comes to printing the screen and cutting the instance of the letter in mspaint, is that there is now noise beneath the head that is not part of the Lameth.
+
+When you're ready, please continue to the next step.

@@ -1,0 +1,7 @@
+Step 10
+
+We've important the settings that display a recognizable instance of the letter. 
+
+We will now change the parameters of the blue color solely. Usualy, it is more comfortable for the eye to see the image when at least to colors are used with the same parameters, because the hue becomes bold. But, for our current agenda, we will use 2 colors with different parameters.
+
+When you're ready, please continue to the next step.

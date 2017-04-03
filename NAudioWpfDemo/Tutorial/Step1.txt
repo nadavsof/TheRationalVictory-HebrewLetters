@@ -1,0 +1,15 @@
+Step 1.
+
+Welcome to the Tutorial.
+
+During the tutorial, please do not change any parameter. Going through the tutorial will change the appropriate parameters automatically. Feel free to zoom in and out of the image using ctrl+scroll.
+
+In this tutorial, You'll learn how to use the program to find the letters (or signs or images) that are drawn by the soundwaves of the words or sentences you say.
+
+The reason the images have to be found, and do not easily appear by themselves, is because when saying, for example, the word "Shin" with the correct accent, the shape of that letter appears tens of times. It takes some work to reach a clear, single, instance out of the tens of instances that appear.
+
+Between steps, notice the controls which texts are blue to understand what parameters were modified since the previous step.
+
+Notice that we already imported the default settings, and will now choose a WAV file. All paths to files (settings and WAVs) in the tutorial are relative paths, but absolute paths are also valid (e.g. C:\documents\audio\x.wav).
+
+Please continue to the next step.

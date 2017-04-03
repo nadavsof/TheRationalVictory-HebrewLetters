@@ -1,0 +1,14 @@
+Step 5
+
+In the previous step, we used the min/max magnitudes to isolate one instance of the letter. You can notice that the numbers that need to be used for this are very uncomfortable, as they are much smaller than one. In addition, the range of possible values of these parameters tend to be really big.
+
+Instead of using these parameters, we'll use during the tutorial the magnitude powers and min/max hues parameters. These parameters are mathematically equivalent to the min/max magnitudes, but are much more comfortable to work with. In one of the following steps of the tutorial, we'll show the mathematical proof of this equivalence.
+
+Please notice that we've imported a new settings file that uses the powers and min/max hues instead of the min/max magnitudes ("Use Mag range instead of powers" is unchecked).
+
+The power of magnitudes can take any value larger than 0, but are usually in the range of 0.7-2. What this parameter does is, when it is different than 1, that the 256 possible hues per point (t,f) are distributed according to the magnitude of the point in the given power, which makes the values relatively more distant when the power is larger than 1, and closer when it is less that 1. As a result, the higher the power is, the bigger the minimal presented magnitude will be (e.g., more points of the graph will be hidden and painted black when the magnitude is 1.1 than when it is 1).
+
+The min/max hues parameters can take an integer value in the range of 0-255. Once the magnitude powers are set, each point in the graph (t,f) gets its own hue out of the possible 256 values (0-255). One unit of hue is computed using the expression 255/MaxMagnitude, so that points (t,f) with magnitude smaller than 255/MaxMagnitude get 0, points with a magnitude between 255/MaxMagnitude and 2*255/MaxMagnitude get 1, etc. Eventually, each point with a hue bigger than 0 will get the max hue (255) to make it comfortable to look at the image, but the intermediate hues are used for extra filtering. By specifying, for example, the power 0.85 for blue color, we let weak magnitudes be displayed. By specifying, for example, the max hue of 4 for the blue color, we are only displaying weak magnitudes out of those that got a hue bigger than 0 for blue, meaning that only points will magnitudes between 255/MaxMagnitude and 5*255/MaxMagnitude will be displayed. As we said, this is mathematically equivalent to using the min/max hues, but uses more human-friendly numbers.
+
+Please continue to the next step when you're ready.
+

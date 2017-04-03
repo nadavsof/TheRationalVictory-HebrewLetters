@@ -1,0 +1,4 @@
+settingsImportPath,Tutorial\Lameth-single.xml
+!import
+filePathTxt,Tutorial\Lameth-single.wav
+!run

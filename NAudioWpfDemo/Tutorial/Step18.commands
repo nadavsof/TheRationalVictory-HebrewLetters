@@ -1,0 +1,6 @@
+magRangeChk,true
+minMagTxt,0.000658154994449025
+maxMagTxt,0.00532696384088475
+blueMagnitudePowerTxt,200
+greenMagnitudePowerTxt,200
+!run
